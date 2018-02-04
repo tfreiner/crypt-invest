@@ -1,6 +1,20 @@
 div#crypto {
-  width: 70%;
+  width: 90%;
   margin: 0 auto 4px auto;
+}
+
+div#search {
+  width: 100%;
+  display: inline-block;
+}
+
+p {
+  display: inline-block;
+}
+
+input#search {
+  display: inline-block;
+  width: 6%;
 }
 
 div#crypto-container {
@@ -10,7 +24,8 @@ div#crypto-container {
   box-shadow: 1px 1px 0 lightgrey;
 }
 
-div#refresh-icon {
+img#refresh-icon {
+  display: inline-block;
   padding-bottom: 30px;
 }
 

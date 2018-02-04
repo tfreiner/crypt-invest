@@ -18,6 +18,13 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    //firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      // Handle Errors here.
+      //var errorCode = error.code;
+      //var errorMessage = error.message;
+      //console.log('error', error);
+      // ...
+    //});
     this.users.push(this.user);
     this.user = {};
   }

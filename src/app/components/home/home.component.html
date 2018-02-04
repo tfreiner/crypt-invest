@@ -1,9 +1,30 @@
-<div *ngIf="cryptos">
-  <div id="refresh-icon">
-    <img src="/assets/images/refresh-icon.png" (click)="getPrices()">
+<div *ngIf="cryptos && dayStats && coinList" id="crypto">
+  <h1>CryptInvest</h1>
+  <div id="search">
+    <p>Don't see your coin? Search for more with code... </p>
+    <input type="text" id="search" class="form-control search" name="search" placeholder="Search" [(ngModel)]="cryptCode" (keyup.enter)="this.onSubmit(cryptCode)">
+    <img src="/assets/images/refresh-icon.png" (click)="refreshStats()">
   </div>
-  <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
-    <span class="left">{{ crypto }}</span>
-    <span class="right">{{ cryptos[crypto].USD | currency:'USD':'symbol'}}</span>
+
+  <div *ngFor="let crypto of objectKeys(cryptos); let i = index">
+    <div *ngIf="dayStats.DISPLAY[crypto]">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse{{i}}">{{ coinList.Data[crypto].FullName }}</a>
+              <span class="right">{{ cryptos[crypto].USD | currency:'USD':'symbol' }}</span>
+            </h4>
+          </div>
+          <div id="collapse{{i}}" class="panel-collapse collapse">
+            <div class="panel-body">
+              <button type="button" class="btn btn-primary" (click)="buy(crypto)">Buy</button>
+              <button type="button" class="btn btn-primary" (click)="sell(crypto)">Sell</button>
+              <span class="right">Change (24HR):   {{ dayStats.DISPLAY[crypto].USD.CHANGE24HOUR }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
