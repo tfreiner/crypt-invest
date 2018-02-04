@@ -1,6 +1,6 @@
-# FirstApp
+# CryptInvest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+This is a WIP project which simulates investing in cryptocurrency.  Firebase is used to handle the backend and the CryptoCompare API is used to access price data.
 
 ## Development server
 
@@ -21,7 +21,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
