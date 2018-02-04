@@ -1,0 +1,9 @@
+<div *ngIf="cryptos">
+  <div id="refresh-icon">
+    <img src="/assets/images/refresh-icon.png" (click)="getPrices()">
+  </div>
+  <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
+    <span class="left">{{ crypto }}</span>
+    <span class="right">{{ cryptos[crypto].USD | currency:'USD':'symbol'}}</span>
+  </div>
+</div>

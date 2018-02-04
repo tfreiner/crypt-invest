@@ -1,0 +1,29 @@
+div#crypto {
+  width: 70%;
+  margin: 0 auto 4px auto;
+}
+
+div#crypto-container {
+  background: white;
+  margin: 0 auto 4px auto;
+  padding: 1em;
+  box-shadow: 1px 1px 0 lightgrey;
+}
+
+div#refresh-icon {
+  padding-bottom: 30px;
+}
+
+img {
+  height: 25px;
+  width: 25px;
+  float: right;
+}
+
+span.left {
+  font-weight: bold;
+}
+
+span.right {
+  float: right;
+}
